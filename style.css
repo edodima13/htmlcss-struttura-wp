@@ -7,52 +7,142 @@
 .container{
     max-width: 1084px;
     margin: 0 auto;
-    margin-bottom: 20px;    
+    margin-bottom: 20px;  
+    position: relative;  
 }
 
-header .container{
-    background-color: rgb(180, 100, 255);
+.over::after{
+    content: "";
+    display: table;
+    clear: both;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.2;
+}
+.over2::after{
+    content: "";
+    display: table;
+    clear: both;
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    top: 0;
+    bottom: 0;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.pattern-text{
+    position: absolute;
+    bottom: 35px;
+    left: 15px;
+    width: 44%;
+    color: white;
+    z-index: 1;
+}
+
+.p-text{
+    font-size: 12px;
+}
+
+.sect1 .banner{
+    max-height: 500px;
+}
+
+.logo{
+    width: 130px;
+    padding-right: 10px;
+    border-right: 1px solid rgb(155, 155, 155);
+}
+
+.menù.clearfix{
+    float: left;  
+}
+ul li{
+    display: inline-block;
+    line-height: 50px;
+    color: rgb(146, 140, 140);
+    padding-right: 10px;
+    padding-top:10px
 }
 
 .sect1 .container{
-    background-color: lightsalmon;
     min-height: 250px;
+    border-radius: 5px;
+}
+
+.banner1{
+    max-height: 400px;
+    width: 100%;
+    position: relative;
+    object-fit: cover;
+    border-radius: 10px;
+    display: block;
 }
 
 .sect2 .container{
-    background-color: rgb(80, 80, 226);
     min-height: 500px;
-}
-
-.foot .container{
-    background-color: rgb(173, 62, 173);
 }
 
 .row [class^="col-"] {
     float: left;
 }
 
-.row::after {
+.clearfix::after {
     content:"";
+    display: table;
+    clear: both;
 }
 
+.row p{
+    color: rgb(146, 140, 140);
+}
+
+
+
 .row > div{
-    background-color: brown;
 }
 
 .col-center{
-    width: 49%;
-    height: 430px;
+    max-width: 49%;
     margin: 0 15px;
+    position: relative;
 }
 
 .col-3{
     width: 24%;
-    height: 430px;
+    position: relative;
+}
+
+.row img{
+    max-height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    position: relative;
+    width: 100%;
+}
+
+img:last-child{
+    height: 200px;
 }
 
 .col12{
     width: 100%;
     margin-bottom: 15px;
     padding-bottom: 15px;
+}
+
+.foot h3{
+    text-align: center;
+}
+
+h3 span{
+    color: red;
+    font-size: 30px;
 }
